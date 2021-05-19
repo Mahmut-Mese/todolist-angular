@@ -1,34 +1,16 @@
 {
-  "tasks": [
-    {
-      "id": 1,
-      "label": "Kitchen Cleanup",
-      "description": "Clean my dirty kitchen",
-      "done": true
-    },
-    {
-      "id": 2,
-      "label": "Taxes ",
-      "description": "Start doing my taxes and contact my accountant jhon for advice",
-      "done": true
-    },
-    {
-      "id": 4,
-      "label": "fourth task 444",
-      "description": "des new",
-      "done": false
-    },
-    {
-      "label": "bulaşık",
-      "description": "ddd",
-      "done": false,
-      "id": 3
-    },
-    {
-      "label": "oko111",
-      "description": "ppp",
-      "done": false,
-      "id": 5
-    }
-  ]
+    "tasks": [{
+            "id": 1,
+            "label": "Kitchen Cleanup",
+            "description": "Clean my dirty kitchen",
+            "done": true
+        },
+        {
+            "id": 2,
+            "label": "Taxes ",
+            "description": "Start doing my taxes and contact my accountant jhon for advice",
+            "done": true
+        }
+
+    ]
 }
