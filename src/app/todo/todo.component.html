@@ -1,0 +1,45 @@
+<section class="todoapp">
+    <header class="header">
+        <h1>Todo</h1>
+        <form class="add-items d-flex">
+            <input type="text" name="title" [(ngModel)]="item.label" class="form-control todo-list-input" placeholder="Add a task for today" autofocus />
+            <textarea name="description" id="description" [(ngModel)]="item.description" cols="10" rows="5" placeholder="add a description"></textarea>
+            <button class="add btn btn-primary" (click)="addOneTask($event)">
+        Add
+      </button>
+            <button class="add btn btn-primary" (click)="updateOneTask(item)">
+        update
+      </button>
+        </form>
+    </header>
+
+    <section class="main">
+        <ul class="todo-list">
+            <li *ngFor="let todo of todos" [ngClass]="{ completed: todo.done }">
+                <div class="view">
+                    <input class="toggle" type="checkbox" [checked]="todo.done" (click)="toggleTask(todo)" />
+                    <label>{{ todo.label }}</label>
+                    <button class="destroy" (click)="deleteOneTask(todo.id)"></button>
+                    <button class="see" (click)="seeTask(todo)"></button>
+                </div>
+            </li>
+        </ul>
+    </section>
+
+    <footer class="footer">
+        <ul class="filters">
+            <li>
+                <a (click)="getAllTasks()" [class.selected]="path === 'tasks'">All</a>
+            </li>
+            <li>
+                <a (click)="getActiveTasks()" [class.selected]="path === 'active'">Active</a
+        >
+      </li>
+      <li>
+        <a (click)="getCompletedTasks()" [class.selected]="path === 'completed'"
+          >Completed</a
+        >
+      </li>
+    </ul>
+  </footer>
+</section>
